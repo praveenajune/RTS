@@ -1,1 +1,179 @@
+Feature: As a System Administrator, I would be able to Add District Administrator
+
+Background: 
+         Given User on Road To Success website
+         When User Sign In
+         Then Verify User log in as System Administrator
+
+Scenario Outline: Add District Administrator role with Valid data
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify role is assign
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|
+         |District Administrator|Alpine|Praveena|Garigapati|test@test.com|test@test.com|abcdefg|abcdefg|9999999999|
+
+Scenario Outline: Add District Administrator role with No option Selected
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |   |Alpine|Praveena|Garigapati|test@test.com|test@test.com|abcdefg|abcdefg|9999999999|Must choose an Option|
+
+Scenario Outline: Add District with No option Selected
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|    |Praveena|Garigapati|test@test.com|test@test.com|abcdefg|abcdefg|9999999999|Must choose an Option|
+
+
+Scenario Outline: Add District Administrator role with First Name Blank
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|    |Garigapati|test@test.com|test@test.com|abcdefg|abcdefg|9999999999|Enter Minimum 1 character|
+
+
+Scenario Outline: Add District Administrator role with Last Name Blank
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|   |test@test.com|test@test.com|abcdefg|abcdefg|9999999999|Enter Minimum 1 character|
+
+Scenario Outline: Add District Administrator role with Invalid Email
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|Garigapati|test.com|test@test.com|abcdefg|abcdefg|9999999999|Invalid Email|
+
+Scenario Outline: Add District Administrator role with Invalid Confirm Email
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|Garigapati|test@test.com|test.com|abcdefg|abcdefg|9999999999|Confirm Email is Invalid|
+
+Scenario Outline: Add District Administrator role when Password does'nt match with Confirm Password
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|Garigapati|test@test.com|test@test.com|abcdefghijklmn|abcdefg|9999999999|Must match Password|
+
+Scenario Outline: Add District Administrator role when Password and Confirm Password has less than 4 char
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|Garigapati|test@test.com|test@test.com|abc|abc|9999999999|Password must be more than 4 characters|
+
+Scenario Outline: Add District Administrator role when Password and Confirm Password has more than 256 char
+         Given As a System Administrator, I should be on "Add Administrator" page
+         When I select Administrator type as "<Select Administrator Type>"
+         And I select District type as "<Select your district>"
+         And I enter First Name "<First Name>"
+         And I enter Last Name "<Last Name>"
+         And I enter Email "<Email>"
+         And I enter Confirm Email "<Confirm Email>"
+         And I enter Password "<Password>"
+         And I enter Confirm Password "<Confirm Password>"
+         And I enter Phone "<Phone>"
+         And I click on Add
+         Then Verify error message as "<Error Message>"
+Examples:
+         |Select Administrator Type|Select your district|First Name|Last Name|Email|Confirm Email|Password|Confirm Password|Phone|Error Message|
+         |District Administrator|Alpine|Praveena|Garigapati|test@test.com|test@test.com|This is my password more than 256 characters|This is my password more than 256 characters|9999999999|Enter password less than 256 characters|
 
