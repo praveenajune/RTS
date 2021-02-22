@@ -9,12 +9,12 @@ Scenario Outline: Add System Administrator role with Valid data
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify role is assign
 Examples:
@@ -25,12 +25,12 @@ Scenario Outline: Add System Administrator role with No option Selected
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -42,12 +42,12 @@ Scenario Outline: Add System Administrator role with First Name Blank
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -59,12 +59,12 @@ Scenario Outline: Add System Administrator role with Last Name Blank
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -75,12 +75,12 @@ Scenario Outline: Add System Administrator role with Invalid Email
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -91,12 +91,12 @@ Scenario Outline: Add System Administrator role with Invalid Confirm Email
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -107,12 +107,12 @@ Scenario Outline: Add System Administrator role when Password does'nt match with
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -123,12 +123,12 @@ Scenario Outline: Add System Administrator role when Password and Confirm Passwo
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
@@ -139,12 +139,12 @@ Scenario Outline: Add System Administrator role when Password and Confirm Passwo
          Given As a System Administrator, I should be on "Add Administrator" page
          When I select Administrator type as "<Admin Type>"
          And I enter First Name "<First Name>"
-         And I enter Last Name "<Last Name>"
-         And I enter Email "<Email>"
-         And I enter Confirm Email "<Confirm Email>"
-         And I enter Password "<Password>"
-         And I enter Confirm Password "<Confirm Password>"
-         And I enter Phone "<Phone>"
+         And Last Name "<Last Name>"
+         And Email "<Email>"
+         And Confirm Email "<Confirm Email>"
+         And Password "<Password>"
+         And Confirm Password "<Confirm Password>"
+         And Phone "<Phone>"
          And I click on Add
          Then Verify error message as "<Error Message>"
 Examples:
